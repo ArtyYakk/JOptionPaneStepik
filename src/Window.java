@@ -16,8 +16,10 @@ public class Window extends JFrame {
             public void keyPressed(KeyEvent e) {
                 System.out.println(e.getKeyCode());
                 if(e.getKeyCode() == 32){
-                    JOptionPane.showMessageDialog(Window.this,
-                            "<html><h2>Артём</h2><i>моё имя</i>");
+                    String name = JOptionPane.showInputDialog(Window.this,"Введите имя",
+                            "Имя",JOptionPane.QUESTION_MESSAGE);
+                    JOptionPane.showMessageDialog(Window.this,("Ваше имя - " +
+                            name), "Имя", JOptionPane.INFORMATION_MESSAGE);
                 }
             }
         });
